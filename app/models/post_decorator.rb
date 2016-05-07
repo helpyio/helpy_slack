@@ -2,7 +2,7 @@ Post.class_eval do
 
   after_create :ping_slack
 
-  # protected
+  protected
 
   def ping_slack
     notifier = Slack::Notifier.new AppSettings['slack.post_url']
