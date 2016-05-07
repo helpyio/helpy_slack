@@ -1,16 +1,22 @@
 # Slack Integration for Helpy
 
+[![Code Climate](https://codeclimate.com/github/scott/helpy_slack/badges/gpa.svg)](https://codeclimate.com/github/scott/helpy_slack)
+
 This extension adds Slack notifications when new discussions are posted to your Helpy and adds a configuration panel in your Settings area.
 
 ## Installation
 
 Add this to your Gemfile:
 
-`gem 'helpy_slack', github: 'helpyio/helpy_slack', branch: 'master'`
+```
+gem 'helpy_slack', github: 'helpyio/helpy_slack', branch: 'master'`
+```
 
 and then run:
 
-`bundle install`
+```
+bundle install
+```
 
 This gem gives you a couple options and all configuration happens inside of the Helpy admin through
 a new settings panel.  You will have to configure your Slack room to support inbound webhooks and then
