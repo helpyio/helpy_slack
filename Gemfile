@@ -13,5 +13,13 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+group :development, :test do
+  # Audit Gemfile for security vulnerabilities
+  gem 'bundler-audit', require: false
+  gem 'byebug'
+  gem 'brakeman', require: false
+  gem 'rubocop'
+  gem 'scss-lint'
+end
+
 gem 'slack-notifier'
-gem 'decorators', '~> 2.0.1'
