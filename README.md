@@ -1,4 +1,4 @@
-# Slack Integration for Helpy
+# Integrate your Helpy with Slack
 
 [![Code Climate](https://codeclimate.com/github/scott/helpy_slack/badges/gpa.svg)](https://codeclimate.com/github/scott/helpy_slack)
 

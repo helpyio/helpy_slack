@@ -3,3 +3,5 @@
 
 AppSettings.defaults['slack.post_url'] = ''
 AppSettings.defaults['slack.default_channel'] = '#general'
+AppSettings.defaults['slack.ping_private_topics'] = 'true'
+AppSettings.defaults['slack.ping_public_topics'] = 'false'
