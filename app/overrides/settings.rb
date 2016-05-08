@@ -7,7 +7,7 @@ Deface::Override.new(
   :insert_bottom => "[data-hook='admin_settings_grid']",
   :name          => "slack_grid_item",
   :text => "
-    <%= settings_item('hash', 'slack', 'Enable Slack for your account') %>
+    <%= settings_item('fa fa-slack', 'slack', 'Enable Slack for your account') %>
     "
   )
 
@@ -16,7 +16,7 @@ Deface::Override.new(
   :virtual_path  => "admin/settings",
   :insert_bottom => "[data-hook='admin_settings_menu']",
   :name          => "slack_settings_menu",
-  :text => "<%= settings_menu_item('hash', 'slack') %>"
+  :text => "<%= settings_menu_item('fa fa-slack', 'slack') %>"
   )
 
 # Configuration Panel
