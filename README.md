@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/scott/helpy_slack/badges/gpa.svg)](https://codeclimate.com/github/scott/helpy_slack)
 
-This extension adds Slack notifications when new discussions are posted to your Helpy and adds a configuration panel in your Settings area.
+This extension adds Slack notifications when new discussions are posted to your Helpy and adds a configuration panel in your Settings area.  You must have Helpy 0.9.2 or newer for the admin settings integration to work correctly.
 
 ## Installation
 
