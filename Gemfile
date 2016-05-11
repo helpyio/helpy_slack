@@ -23,3 +23,4 @@ group :development, :test do
 end
 
 gem 'slack-notifier'
+gem 'deface'
