@@ -1,3 +1,5 @@
+require 'deface'
+
 module HelpySlack
   class Engine < ::Rails::Engine
 
