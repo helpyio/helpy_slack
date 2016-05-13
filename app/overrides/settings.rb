@@ -3,7 +3,7 @@
 
 # Grid menu integration
 Deface::Override.new(
-  :virtual_path  => "admin/settings",
+  :virtual_path  => "admin/settings/index",
   :insert_bottom => "[data-hook='admin_settings_grid']",
   :name          => "slack_grid_item",
   :text => "
@@ -13,7 +13,7 @@ Deface::Override.new(
 
 # Left menu integration
 Deface::Override.new(
-  :virtual_path  => "admin/settings",
+  :virtual_path  => "admin/settings/index",
   :insert_bottom => "[data-hook='admin_settings_menu']",
   :name          => "slack_settings_menu",
   :text => "<%= settings_menu_item('fa fa-slack', 'slack') %>"
@@ -21,7 +21,7 @@ Deface::Override.new(
 
 # Configuration Panel
 Deface::Override.new(
-  :virtual_path  => "admin/settings",
+  :virtual_path  => "admin/settings/index",
   :insert_before => "div.submit-section",
   :name          => "slack_panel",
   :text => "

@@ -1,4 +1,5 @@
 require 'deface'
+require 'slack-notifier'
 
 module HelpySlack
   class Engine < ::Rails::Engine

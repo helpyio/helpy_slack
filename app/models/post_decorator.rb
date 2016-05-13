@@ -17,7 +17,7 @@ Post.class_eval do
 
   def send_ping(post)
     # Assemble message
-    url = "#{AppSettings['settings.site_url']}#{Rails.application.routes.url_helpers.admin_ticket_path(post.topic.id)}"
+    url = "#{AppSettings['settings.site_url']}#{Rails.application.routes.url_helpers.admin_topic_path(post.topic.id)}"
     title = "New Topic started by #{post.topic.user.name}"
     message = {
       title: "<#{url}|#{post.topic.name}>",
