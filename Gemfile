@@ -24,3 +24,4 @@ end
 
 gem 'slack-notifier'
 gem 'deface'
+gem 'sucker_punch', '~> 2.0'
