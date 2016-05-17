@@ -1,6 +1,6 @@
 Post.class_eval do
 
-  after_create :ping_slack
+  after_commit :ping_slack
 
 #  protected
 
