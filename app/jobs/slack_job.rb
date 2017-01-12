@@ -12,7 +12,6 @@ class SlackJob < ActiveJob::Base
 
     # Send Ping
     notifier = Slack::Notifier.new AppSettings['slack.post_url']
-    notifier.username = "HelpyBot"
     notifier.ping title, attachments: [message], channel: AppSettings['slack.default_channel']
   end
 end
