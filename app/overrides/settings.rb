@@ -7,7 +7,7 @@ Deface::Override.new(
   :insert_bottom => "[data-hook='admin_settings_grid']",
   :name          => "slack_grid_item",
   :text => "
-    <%= settings_item('fa fa-slack', 'slack', 'Enable Slack for your account') %>
+    <%= settings_item('fa fa-slack', 'slack', 'Enable Slack for your account', admin_slack_settings_path) %>
     "
   )
 
@@ -16,20 +16,5 @@ Deface::Override.new(
   :virtual_path  => "admin/settings/index",
   :insert_bottom => "[data-hook='admin_settings_menu']",
   :name          => "slack_settings_menu",
-  :text => "<%= settings_menu_item('fa fa-slack', 'slack') %>"
-  )
-
-# Configuration Panel
-Deface::Override.new(
-  :virtual_path  => "admin/settings/index",
-  :insert_before => "div.submit-section",
-  :name          => "slack_panel",
-  :text => "
-    <div class='settings-section slack' data-hook='admin_settings_slack'>
-      <%= f.text_field 'slack.post_url', value: AppSettings['slack.post_url'], label: 'Webhook URL' %>
-      <%= f.text_field 'slack.default_channel', value: AppSettings['slack.default_channel'], label: 'Default Channel' %>
-      <%= f.check_box 'slack.ping_private_topics', { checked: AppSettings['slack.ping_private_topics'] == '1', label: 'Post private topics to Slack' } %>
-      <%= f.check_box 'slack.ping_public_topics', { checked: AppSettings['slack.ping_public_topics'] == '1', label: 'Post public topics to Slack' } %>
-    </div>
-    "
+  :text => "<%= settings_menu_item('fa fa-slack', 'slack', admin_slack_settings_path) %>"
   )

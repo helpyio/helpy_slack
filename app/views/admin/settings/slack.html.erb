@@ -1,0 +1,18 @@
+<% content_for :settings do %>
+
+  <div class="admin-header">
+      <h2><%= "#{t(:settings, default: "Settings")}: #{t(:slack, default: "Slack")}" %></h2>
+  </div>
+
+  <%= bootstrap_form_tag url: admin_update_settings_path, method: 'put', multipart: true, authenticity_token: true do |f| %>
+  <div class='settings-section slack' data-hook='admin_settings_slack'>
+    <%= f.text_field 'slack.post_url', value: AppSettings['slack.post_url'], label: 'Webhook URL' %>
+    <%= f.text_field 'slack.default_channel', value: AppSettings['slack.default_channel'], label: 'Default Channel' %>
+    <%= f.check_box 'slack.ping_private_topics', { checked: AppSettings['slack.ping_private_topics'] == '1', label: 'Post private topics to Slack', label_class: 'full-width', class: 'bs-toggle', data: { size: 'mini' } } %>
+    <%= f.check_box 'slack.ping_public_topics', { checked: AppSettings['slack.ping_public_topics'] == '1', label: 'Post public topics to Slack', label_class: 'full-width', class: 'bs-toggle', data: { size: 'mini' } } %>
+  </div>
+    <div class="submit-section">
+      <%= f.submit "Save Settings", class: 'btn btn-warning' %>
+    </div>
+  <% end %>
+<% end %>
